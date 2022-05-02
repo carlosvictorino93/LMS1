@@ -4,8 +4,6 @@ import com.letscode.store.dto.ClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotFoundException;
 import com.letscode.store.model.Client;
-import com.letscode.store.model.QClient;
-import com.letscode.store.model.QPurchase;
 import com.letscode.store.repository.ClientRepository;
 import com.querydsl.core.types.Predicate;
 import org.junit.jupiter.api.Assertions;

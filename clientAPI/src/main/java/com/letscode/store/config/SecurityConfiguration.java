@@ -1,6 +1,8 @@
 package com.letscode.store.config;
 
 // import com.letscode.store.filter.JwtTokenFilter;
+import com.letscode.store.filter.JwtTokenFilter;
+import com.letscode.store.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,11 +23,8 @@ import javax.sql.DataSource;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-//    @Autowired
-//    private TokenService tokenService;
-//
-//    @Autowired
-//    private UserRepository userRepository;
+    @Autowired
+    private TokenService tokenService;
 
     @Bean
     protected AuthenticationManager authenticationManager() throws Exception {
@@ -39,13 +38,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/client").permitAll()
+                .antMatchers("/client").authenticated()
                 .antMatchers("/health-check").permitAll()
                 .and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-                // .and()
-                // .addFilterBefore(new JwtTokenFilter(tokenService, userRepository), UsernamePasswordAuthenticationFilter.class);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .addFilterBefore(new JwtTokenFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
     }
     @Bean
     public UserDetailsManager users(DataSource dataSource) {

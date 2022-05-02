@@ -11,6 +11,6 @@ public class HealthCheckController {
     @ResponseBody
     @GetMapping
     public String healthCheck(){
-        return "Server running";
+        return "LoginAPI running";
     }
 }

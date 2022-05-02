@@ -30,7 +30,7 @@ public class LoginController {
     }
 
     @GetMapping
-    public UsernamePasswordAuthenticationToken getAutenthicate(@RequestBody String token){
+    public UsernamePasswordAuthenticationToken getAutenthicate(@RequestParam String token){
         return tokenService.getAuthenticate(token);
     }
 
