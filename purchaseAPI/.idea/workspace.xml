@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28d0ad25-b255-4080-9eeb-0e057d62f5dc" name="Changes" comment="Criado micro serviço Login a partir do monolito de referência.">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/HealthCheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductAndQuantityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/RequestPurchaseProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/TokenDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/AlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/ErrorValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/NotEnoughException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchasedProductKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/RolesEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/PurchaseProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/PurchaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/HealthCheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ProductAndQuantityDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/RequestPurchaseProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/TokenDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/AlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/ErrorValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/NotEnoughException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Authority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/AuthorityKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/PurchasedProductKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/RolesEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/AuthorityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/PurchaseProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/PurchaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/AuthorityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/ClientControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/PurchaseControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/repository/ClientRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/ClientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/PurchaseProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/PurchaseServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/StoreDB-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/letscode/store/model/QClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ClientAPI" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27bWxNlSt4Zb3xans33irOXV4l2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/letscode/store" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\purchaseAPI\src\main\java\com\letscode\store" />
+      <recent name="C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\purchaseAPI\src" />
+      <recent name="C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\purchaseAPI" />
+      <recent name="C:\Users\Felipe\IdeaProjects\StoreDB\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.letscode.store.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="All in StoreDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letscode.store.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.letscode.store.controller.ProductControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.deleteProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.controller.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letscode.store.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.letscode.store.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="deleteProductTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.updateProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letscode.store.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.letscode.store.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="updateProductTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="StoreDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.letscode.store.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.Unnamed" />
+      <item itemvalue="JUnit.ProductControllerTest.deleteProductTest" />
+      <item itemvalue="JUnit.ProductControllerTest.updateProductTest" />
+      <item itemvalue="JUnit.ProductControllerTest" />
+      <item itemvalue="JUnit.All in StoreDB" />
+      <item itemvalue="Spring Boot.App" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.All in StoreDB" />
+        <item itemvalue="JUnit.ProductControllerTest" />
+        <item itemvalue="JUnit.ProductControllerTest.updateProductTest" />
+        <item itemvalue="JUnit.ProductControllerTest.deleteProductTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28d0ad25-b255-4080-9eeb-0e057d62f5dc" name="Changes" comment="" />
+      <created>1649589517716</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649589517716</updated>
+      <workItem from="1649589518982" duration="8785000" />
+      <workItem from="1649598451619" duration="152000" />
+      <workItem from="1649598706071" duration="7068000" />
+      <workItem from="1649621695795" duration="19916000" />
+      <workItem from="1649685419743" duration="16991000" />
+      <workItem from="1649943954001" duration="20055000" />
+      <workItem from="1650043097362" duration="17095000" />
+      <workItem from="1650130260923" duration="13032000" />
+      <workItem from="1650154975871" duration="3472000" />
+      <workItem from="1650199531522" duration="21082000" />
+      <workItem from="1650291220340" duration="20672000" />
+      <workItem from="1650387599452" duration="1944000" />
+      <workItem from="1650978655019" duration="4116000" />
+      <workItem from="1651100027323" duration="60000" />
+      <workItem from="1651179495805" duration="595000" />
+      <workItem from="1651234572923" duration="9330000" />
+      <workItem from="1651258509512" duration="8839000" />
+      <workItem from="1651324571789" duration="11008000" />
+      <workItem from="1651411911645" duration="12524000" />
+      <workItem from="1651451153779" duration="2077000" />
+      <workItem from="1651453289346" duration="3522000" />
+    </task>
+    <task id="LOCAL-00001" summary="Criado projeto com as regras de negócio">
+      <created>1649971291819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649971291819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created test of services.">
+      <created>1650158342124</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650158342124</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created test of Controllers.">
+      <created>1650230409524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650230409527</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adicionado model User e Authority&#10;Adicionado Swagger">
+      <created>1650321353398</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321353398</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adicionado Authenticate">
+      <created>1651269849144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651269849146</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicionado a problem fix with authenticate">
+      <created>1651343430413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651343430413</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Criado micro serviço Login a partir do monolito de referência.">
+      <created>1651427974808</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651427974808</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criado projeto com as regras de negócio" />
+    <MESSAGE value="Created test of services." />
+    <MESSAGE value="Created test of Controllers." />
+    <MESSAGE value="Adicionado model User e Authority&#10;Adicionado Swagger" />
+    <MESSAGE value="Adicionado Authenticate" />
+    <MESSAGE value="Adicionado a problem fix with authenticate" />
+    <MESSAGE value="Criado micro serviço Login a partir do monolito de referência." />
+    <option name="LAST_COMMIT_MESSAGE" value="Criado micro serviço Login a partir do monolito de referência." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/StoreDB$All_in_StoreDB.ic" NAME="All in StoreDB Coverage Results" MODIFIED="1650230240146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/StoreDB$ProductControllerTest.ic" NAME="ProductControllerTest Coverage Results" MODIFIED="1650229761353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.letscode.store.controller.*</FILTER>
+    </SUITE>
+  </component>
+</project>
