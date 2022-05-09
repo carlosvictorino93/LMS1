@@ -5,7 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity(name = "client")
+@Document(collection = "client")
 @Getter @Setter
 @Builder
 @AllArgsConstructor

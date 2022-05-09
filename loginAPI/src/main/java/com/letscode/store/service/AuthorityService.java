@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthorityService {
 
+    private final MongoTemplate mongoTemplate;
     private final AuthorityRepository authorityRepository;
 
     public void saveAuthorities(User userDB, RolesEnum role) {

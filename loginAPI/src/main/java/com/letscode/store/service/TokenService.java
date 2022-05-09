@@ -26,6 +26,7 @@ public class TokenService {
 
     @Autowired
     private UserRepository userRepository;
+    private final MongoTemplate mongoTemplate;
 
     public UsernamePasswordAuthenticationToken getAuthenticate(String token) {
         boolean isValid = this.isTokenValid(token);

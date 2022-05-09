@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ClientRepository extends JpaRepository<Client, Long>, QuerydslPredicateExecutor<Client> {
+public interface ClientRepository extends MongoRepository<Client, String> {
     Optional<Client> findClientByCpf(String cpf);
 }

@@ -5,7 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
-@Entity(name = "authorities")
+@Document(collection = "authorities")
 @Getter @Setter
 @Builder
 @NoArgsConstructor

@@ -18,6 +18,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ClientService {
     private final ClientRepository clientRepository;
+    private final MongoTemplate mongoTemplate;
 
     public ClientDTO saveClient(ClientDTO clientDTO) throws AlreadyExistException {
         Optional<Client> client = clientRepository.findClientByCpf(clientDTO.getCpf());
@@ -51,5 +52,17 @@ public class ClientService {
         Optional<Client> client = clientRepository.findClientByCpf(cpf);
         client.orElseThrow(()-> new NotFoundException("Client not found"));
         return client.get();
+    }
+
+    @Async
+    @SneakyThrows
+    public Future<Integer> conta(Integer numero) {
+        Integer soma = IntStream
+                .range(1, numero)
+                .sum();
+
+        Thread.sleep(5000);
+
+        return new AsyncResult<>(soma);
     }
 }

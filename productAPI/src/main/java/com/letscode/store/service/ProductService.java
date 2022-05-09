@@ -17,6 +17,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ProductService {
 
+    private final MongoTemplate mongoTemplate;
     private final ProductRepository productRepository;
 
     public ProductDTO saveProduct(ProductDTO productDTO) {

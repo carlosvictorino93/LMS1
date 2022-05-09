@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name = "users")
+@Document(collection = "users")
 @Getter @Setter
 @Builder
 @NoArgsConstructor

@@ -7,5 +7,5 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PurchaseProductRepository extends JpaRepository<PurchaseProduct, PurchasedProductKey>, QuerydslPredicateExecutor<PurchaseProduct> {
+public interface PurchaseProductRepository extends MongoRepository<PurchaseProduct, String>> {
 }
