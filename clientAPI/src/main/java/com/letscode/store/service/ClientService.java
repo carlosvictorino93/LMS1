@@ -5,10 +5,10 @@ import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotFoundException;
 import com.letscode.store.model.Client;
 import com.letscode.store.repository.ClientRepository;
-import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -28,8 +28,8 @@ public class ClientService {
 
     }
 
-    public Page<ClientDTO> listClient(Predicate predicate, Pageable pageable) {
-        return clientRepository.findAll(predicate, pageable).map(ClientDTO::convert);
+    public Page<ClientDTO> listClient(Pageable pageable) {
+        return clientRepository.findAll(pageable).map(ClientDTO::convert);
     }
 
     public ClientDTO updateClient(ClientDTO clientDTO, String cpf) {
@@ -54,15 +54,4 @@ public class ClientService {
         return client.get();
     }
 
-    @Async
-    @SneakyThrows
-    public Future<Integer> conta(Integer numero) {
-        Integer soma = IntStream
-                .range(1, numero)
-                .sum();
-
-        Thread.sleep(5000);
-
-        return new AsyncResult<>(soma);
-    }
 }

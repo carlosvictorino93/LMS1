@@ -5,21 +5,14 @@ import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotFoundException;
 import com.letscode.store.model.Client;
 import com.letscode.store.repository.ClientRepository;
-import com.querydsl.core.types.Predicate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @ExtendWith(SpringExtension.class)
@@ -59,26 +52,26 @@ public class ClientServiceTest {
 
         Assertions.assertThrows(AlreadyExistException.class, () -> clientService.saveClient(ClientDTO.builder().build()));
     }
-
-    @Test
-    public void getListOfClients(){
-        List<Client> clients = new ArrayList<>();
-        clients.add(Client.builder()
-                .cpf("123")
-                .name("Felipe")
-                .build());
-        Page<Client> pageableClients = new PageImpl<>(clients);
-
-        Pageable page = PageRequest.of(0,20);
-        Predicate predicate = null;
-
-        Mockito.when(clientRepository.findAll(predicate, page)).thenReturn(pageableClients);
-
-        Page<ClientDTO> returnedClients = clientService.listClient(predicate, page);
-        Assertions.assertEquals(1, returnedClients.getSize());
-        Assertions.assertTrue(returnedClients.stream().findAny().isPresent());
-        Assertions.assertEquals("Felipe", returnedClients.stream().findAny().get().getName());
-    }
+//
+//    @Test
+//    public void getListOfClients(){
+//        List<Client> clients = new ArrayList<>();
+//        clients.add(Client.builder()
+//                .cpf("123")
+//                .name("Felipe")
+//                .build());
+//        Page<Client> pageableClients = new PageImpl<>(clients);
+//
+//        Pageable page = PageRequest.of(0,20);
+//        Predicate predicate = null;
+//
+//        Mockito.when(clientRepository.findAll(predicate, page)).thenReturn(pageableClients);
+//
+//        Page<ClientDTO> returnedClients = clientService.listClient(predicate, page);
+//        Assertions.assertEquals(1, returnedClients.getSize());
+//        Assertions.assertTrue(returnedClients.stream().findAny().isPresent());
+//        Assertions.assertEquals("Felipe", returnedClients.stream().findAny().get().getName());
+//    }
 
     @Test
     public void updateAClientThatExist(){
