@@ -23,6 +23,7 @@ public class ProductController {
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
     public ProductDTO saveProduct(@RequestBody @Valid ProductDTO productDTO){
+
         return productService.saveProduct(productDTO);
     }
 

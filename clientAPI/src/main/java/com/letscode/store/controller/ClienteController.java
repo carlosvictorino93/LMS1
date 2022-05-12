@@ -4,7 +4,6 @@ import com.letscode.store.dto.ClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.model.Client;
 import com.letscode.store.service.ClientService;
-import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,14 +23,16 @@ public class ClienteController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public ClientDTO saveClient(@RequestBody @Valid ClientDTO clientDTO) throws AlreadyExistException {
+    public ClientDTO saveClient(@RequestBody @Valid ClientDTO clientDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
+        System.out.println(token);
         return clientService.saveClient(clientDTO);
 
     }
 
     @GetMapping
-    public Page<ClientDTO> getClient(@QuerydslPredicate(root = Client.class) Predicate predicate, Pageable pageable){
-        return clientService.listClient(predicate, pageable);
+    public Page<ClientDTO> getClient(Pageable pageable, @RequestHeader("authorization") String token){
+        System.out.println(token);
+        return clientService.listClient(pageable);
     }
 
 

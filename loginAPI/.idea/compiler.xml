@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="loginAPI" />
-        <module name="StoreDB" />
         <module name="LoginAPI" />
+        <module name="loginAPI2" />
+        <module name="StoreDB" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
       <module name="LoginAPI" options="-parameters" />
       <module name="StoreDB" options="-parameters" />
       <module name="loginAPI" options="-parameters" />
+      <module name="loginAPI2" options="-parameters" />
     </option>
   </component>
 </project>
