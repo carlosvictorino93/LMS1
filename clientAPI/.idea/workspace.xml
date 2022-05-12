@@ -4,36 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70f4d68c-1ff0-468a-b921-10c3cc0f5ca3" name="Changes" comment="">
+    <list default="true" id="70f4d68c-1ff0-468a-b921-10c3cc0f5ca3" name="Changes" comment="Atualizado POM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/future/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/config/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/filter/JwtTokenFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/RolesEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/StoreDB-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/generated-sources/java/com/letscode/store/model/QClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/test-classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/test-classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/future/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/Authority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/AuthorityKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/AuthorityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/AuthorityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/AuthorityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/AuthorityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/StoreDB-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/StoreDB-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/dto/UserDTO$UserDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/dto/UserDTO$UserDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/filter/JwtTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/filter/JwtTokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority$AuthorityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority$AuthorityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/AuthorityKey$AuthorityKeyBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/AuthorityKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/QAuthority.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/QAuthorityKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/QUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/repository/AuthorityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/repository/AuthorityRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/service/AuthorityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/generated-sources/java/com/letscode/store/model/QAuthority.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/generated-sources/java/com/letscode/store/model/QAuthorityKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/generated-sources/java/com/letscode/store/model/QUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +100,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loginAPI" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -122,7 +137,23 @@
       <workItem from="1651447309968" duration="4251000" />
       <workItem from="1651452544686" duration="3009000" />
       <workItem from="1652353442378" duration="294000" />
+      <workItem from="1652354231027" duration="2938000" />
     </task>
+    <task id="LOCAL-00001" summary="Atualizado POM">
+      <created>1652354614457</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652354614457</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Atualizado POM">
+      <created>1652354648213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652354648213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,5 +169,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Atualizado POM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizado POM" />
   </component>
 </project>

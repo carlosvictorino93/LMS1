@@ -1,13 +1,17 @@
 package com.letscode.store.model;
 
+
 import com.letscode.store.dto.UserDTO;
 import lombok.*;
+import nonapi.io.github.classgraph.json.Id;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-@Document(collection = "users")
+@Document(collection = "user")
 @Getter @Setter
 @Builder
 @NoArgsConstructor
@@ -15,25 +19,20 @@ import java.util.List;
 public class User {
 
     @Id
-    @Column(name = "username")
-    private String userName;
-
-    @Column(name = "password")
+    private String  id;
+    private String username;
     private String password;
+    private boolean enabled;
+    private Set<RolesEnum> roles;
 
-    @Column(name = "enabled")
-    private Boolean enable;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private List<Authority> authorities = new ArrayList<>();
-
-    public static User convert(UserDTO userDTO) {
+    public static User convert(UUID id, UserDTO userDTO) {
         return User.builder()
-                .userName(userDTO.getUsername())
+                .id(id.toString())
+                .username(userDTO.getUsername())
                 .password(userDTO.getPassword())
-                .enable(userDTO.getEnable())
+                .enabled(userDTO.getEnable())
+                .roles(new HashSet<>(userDTO.getRoles()))
                 .build();
     }
-
-
 }

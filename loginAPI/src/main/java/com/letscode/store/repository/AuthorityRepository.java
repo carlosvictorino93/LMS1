@@ -1,8 +1,7 @@
 package com.letscode.store.repository;
 
 import com.letscode.store.model.Authority;
-import com.letscode.store.model.AuthorityKey;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

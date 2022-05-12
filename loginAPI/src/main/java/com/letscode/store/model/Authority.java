@@ -1,28 +1,19 @@
 package com.letscode.store.model;
 
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-
-import javax.persistence.*;
+import nonapi.io.github.classgraph.json.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "authorities")
 @Getter @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Authority implements GrantedAuthority {
+public class Authority {
 
-    @EmbeddedId
-    private AuthorityKey authorityKey;
+    @Id
+    private String id;
 
-    @ManyToOne
-    @MapsId("userName")
-    @JoinColumn(name = "username")
-    private User user;
+    private String role;
 
-
-    @Override
-    public String getAuthority() {
-        return authorityKey.getAuthority();
-    }
 }

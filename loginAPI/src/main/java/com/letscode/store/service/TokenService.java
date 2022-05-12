@@ -9,11 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class TokenService {
@@ -26,7 +31,7 @@ public class TokenService {
 
     @Autowired
     private UserRepository userRepository;
-    private final MongoTemplate mongoTemplate;
+
 
     public UsernamePasswordAuthenticationToken getAuthenticate(String token) {
         boolean isValid = this.isTokenValid(token);
@@ -40,10 +45,15 @@ public class TokenService {
 
     private UsernamePasswordAuthenticationToken authenticate(String token) {
         String user = this.getTokenUser(token);
-        Optional<com.letscode.store.model.User> userDBOptional = userRepository.findByUserName(user);
+        Optional<com.letscode.store.model.User> userDBOptional = userRepository.findUserByUsername(user);
         if (userDBOptional.isPresent()){
             com.letscode.store.model.User userDB = userDBOptional.get();
-             return new UsernamePasswordAuthenticationToken(userDB, null, userDB.getAuthorities());
+            Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+            userDB.getRoles()
+                    .forEach(role -> {
+                        grantedAuthorities.add(new SimpleGrantedAuthority(role.toString()));
+                    });
+             return new UsernamePasswordAuthenticationToken(userDB, null, grantedAuthorities);
 
         }else {
             return null;
@@ -73,5 +83,13 @@ public class TokenService {
     public String getTokenUser(String token){
        Claims claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
        return claims.getSubject();
+    }
+
+    public String getToken(String token) {
+        if (token == null || !token.startsWith("Bearer")) {
+            return null;
+        }
+
+        return token.substring(7);
     }
 }

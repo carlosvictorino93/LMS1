@@ -6,6 +6,7 @@ import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,4 +24,13 @@ public class UserDTO {
     @NotNull
     private List<RolesEnum> roles;
 
+
+    public static UserDTO convert(User user) {
+        return UserDTO.builder()
+                .username(user.getUsername())
+                .password(user.getPassword())
+                .enable(user.isEnabled())
+                .roles(new ArrayList<>(user.getRoles()))
+                .build();
+    }
 }

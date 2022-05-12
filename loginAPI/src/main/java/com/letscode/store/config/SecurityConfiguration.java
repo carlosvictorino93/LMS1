@@ -1,33 +1,25 @@
 package com.letscode.store.config;
 
-import com.letscode.store.filter.JwtTokenFilter;
-import com.letscode.store.repository.UserRepository;
-import com.letscode.store.service.TokenService;
+import com.letscode.store.service.MongoAuthUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-import javax.sql.DataSource;
 
 @Configuration
+@EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private TokenService tokenService;
-
-    @Autowired
-    private UserRepository userRepository;
 
     @Bean
     protected AuthenticationManager authenticationManager() throws Exception {
@@ -46,15 +38,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login/").permitAll()
                 .and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilterBefore(new JwtTokenFilter(tokenService, userRepository), UsernamePasswordAuthenticationFilter.class);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//                .and()
+//                .addFilterBefore(new JwtTokenFilter(tokenService, userRepository), UsernamePasswordAuthenticationFilter.class);
     }
+
     @Bean
-    public UserDetailsManager users(DataSource dataSource) {
-
-
-        return new JdbcUserDetailsManager(dataSource);
+    public UserDetailsService mongoUserDetails() {
+        return new MongoAuthUserDetailService();
+    }
+    @Override
+    protected void configure(@Autowired AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(mongoUserDetails())
+                .passwordEncoder(new BCryptPasswordEncoder());
     }
 
     @Bean
