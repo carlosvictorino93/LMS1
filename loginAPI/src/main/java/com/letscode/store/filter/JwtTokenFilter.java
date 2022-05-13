@@ -1,7 +1,9 @@
 package com.letscode.store.filter;
 
+import com.letscode.store.dto.AuthenticationDTO;
 import com.letscode.store.service.TokenService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -21,7 +23,11 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         String token = getToken(request);
-        SecurityContextHolder.getContext().setAuthentication(tokenService.getAuthenticate(token));
+        boolean isValid = tokenService.isTokenValid(token);
+        if(isValid){
+            UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = tokenService.authenticate(token);
+            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+        }
 
         filterChain.doFilter(request, response);
     }

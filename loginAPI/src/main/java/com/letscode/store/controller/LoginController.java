@@ -1,5 +1,6 @@
 package com.letscode.store.controller;
 
+import com.letscode.store.dto.AuthenticationDTO;
 import com.letscode.store.dto.LoginDTO;
 import com.letscode.store.dto.TokenDTO;
 import com.letscode.store.service.TokenService;
@@ -30,7 +31,7 @@ public class LoginController {
     }
 
     @GetMapping
-    public UsernamePasswordAuthenticationToken getAutenthicate(@RequestHeader("authorization") String token){
+    public AuthenticationDTO getAutenthicate(@RequestHeader("authorization") String token){
         return tokenService.getAuthenticate(tokenService.getToken(token));
     }
 

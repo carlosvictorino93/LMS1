@@ -2,7 +2,9 @@ package com.letscode.store.controller;
 
 import com.letscode.store.dto.ClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
+import com.letscode.store.exception.NotAuthorizedException;
 import com.letscode.store.service.ClientService;
+import com.letscode.store.service.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,30 +20,42 @@ import javax.validation.Valid;
 public class ClienteController {
     private final ClientService clientService;
 
+    private final TokenService tokenService;
+
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
     public ClientDTO saveClient(@RequestBody @Valid ClientDTO clientDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
-        System.out.println(token);
-        return clientService.saveClient(clientDTO);
-
+        if (tokenService.getAuthenticate(token)){
+            return clientService.saveClient(clientDTO);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 
 
     @GetMapping
     public Page<ClientDTO> getClient(Pageable pageable, @RequestHeader("authorization") String token) {
-        System.out.println(token);
-        return clientService.listClient(pageable);
+        if (tokenService.getAuthenticate(token)){
+            return clientService.listClient(pageable);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 
 
     @PutMapping("/{cpf}")
-    public ClientDTO updateClient(@RequestBody @Valid ClientDTO clientDTO, @PathVariable String cpf) {
-        return clientService.updateClient(clientDTO, cpf);
+    public ClientDTO updateClient(@RequestBody @Valid ClientDTO clientDTO, @PathVariable String cpf, @RequestHeader("authorization") String token) {
+        if (tokenService.getAuthenticate(token)){
+            return clientService.updateClient(clientDTO, cpf);
+        }
+        throw new NotAuthorizedException("não permitido");
+
     }
 
 
     @DeleteMapping("/{cpf}")
-    public void deleteClient(@PathVariable String cpf) {
-        clientService.deleteClient(cpf);
+    public void deleteClient(@PathVariable String cpf, @RequestHeader("authorization") String token) {
+        if (tokenService.getAuthenticate(token)){
+            clientService.deleteClient(cpf);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 }

@@ -1,8 +1,1 @@
-com\letscode\store\service\PurchaseProductServiceTest.class
-com\letscode\store\controller\ProductControllerTest.class
-com\letscode\store\controller\ClientControllerTest.class
-com\letscode\store\service\ProductServiceTest.class
-com\letscode\store\service\PurchaseServiceTest.class
 com\letscode\store\service\ClientServiceTest.class
-com\letscode\store\controller\PurchaseControllerTest.class
-com\letscode\store\repository\ClientRepositoryTest.class

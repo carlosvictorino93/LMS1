@@ -2,8 +2,9 @@ package com.letscode.store.model;
 
 import com.letscode.store.dto.ClientDTO;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.*;
 
 @Document(collection = "client")
 @Getter @Setter
@@ -12,16 +13,16 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Client {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @MongoId
+    private String id;
 
     private String name;
 
     private String cpf;
 
-    public static Client convert(ClientDTO dto) {
+    public static Client convert(String id, ClientDTO dto) {
        return Client.builder()
+               .id(id)
                 .name(dto.getName())
                 .cpf(dto.getCpf())
                 .build();

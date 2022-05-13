@@ -1,9 +1,6 @@
 package com.letscode.store.config;
 
-import com.letscode.store.exception.AlreadyExistException;
-import com.letscode.store.exception.ErrorValidation;
-import com.letscode.store.exception.NotEnoughException;
-import com.letscode.store.exception.NotFoundException;
+import com.letscode.store.exception.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -50,4 +47,8 @@ public class ErrorHandle {
     @ResponseStatus(code = HttpStatus.NOT_ACCEPTABLE)
     @ExceptionHandler(NotEnoughException.class)
     public String notEnoughHandler( NotEnoughException exception){ return exception.getMessage();}
+
+    @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler(NotAuthorizedException.class)
+    public String NotAuthorized( NotEnoughException exception){ return exception.getMessage();}
 }

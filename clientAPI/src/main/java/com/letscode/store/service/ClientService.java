@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 
 @Service
@@ -24,7 +25,7 @@ public class ClientService {
         Optional<Client> client = clientRepository.findClientByCpf(clientDTO.getCpf());
         if(client.isPresent()) throw new AlreadyExistException("Client Already Exist");
 
-        return ClientDTO.convert(clientRepository.save(Client.convert(clientDTO)));
+        return ClientDTO.convert(clientRepository.save(Client.convert(UUID.randomUUID().toString(), clientDTO)));
 
     }
 

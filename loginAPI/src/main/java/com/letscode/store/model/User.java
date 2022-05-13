@@ -3,11 +3,8 @@ package com.letscode.store.model;
 
 import com.letscode.store.dto.UserDTO;
 import lombok.*;
-import nonapi.io.github.classgraph.json.Id;
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.*;
 
