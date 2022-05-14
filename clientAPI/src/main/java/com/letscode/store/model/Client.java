@@ -2,6 +2,7 @@ package com.letscode.store.model;
 
 import com.letscode.store.dto.ClientDTO;
 import lombok.*;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -18,6 +19,7 @@ public class Client {
 
     private String name;
 
+    @Indexed(unique=true)
     private String cpf;
 
     public static Client convert(String id, ClientDTO dto) {

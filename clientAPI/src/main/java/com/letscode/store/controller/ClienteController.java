@@ -3,6 +3,7 @@ package com.letscode.store.controller;
 import com.letscode.store.dto.ClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotAuthorizedException;
+import com.letscode.store.model.Client;
 import com.letscode.store.service.ClientService;
 import com.letscode.store.service.TokenService;
 import lombok.RequiredArgsConstructor;
@@ -31,14 +32,14 @@ public class ClienteController {
         throw new NotAuthorizedException("não permitido");
     }
 
-
     @GetMapping
-    public Page<ClientDTO> getClient(Pageable pageable, @RequestHeader("authorization") String token) {
+    public Page<ClientDTO> getClients(ClientDTO clientDTO, Pageable pageable, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token)){
-            return clientService.listClient(pageable);
+            return clientService.listClient(clientDTO, pageable);
         }
         throw new NotAuthorizedException("não permitido");
     }
+
 
 
     @PutMapping("/{cpf}")
@@ -55,7 +56,9 @@ public class ClienteController {
     public void deleteClient(@PathVariable String cpf, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token)){
             clientService.deleteClient(cpf);
+        }else{
+            throw new NotAuthorizedException("não permitido");
         }
-        throw new NotAuthorizedException("não permitido");
+
     }
 }
