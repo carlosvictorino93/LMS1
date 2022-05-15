@@ -1,65 +1,27 @@
 package com.letscode.store.service;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwt;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.User;
+import com.letscode.store.dto.AuthenticationDTO;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import java.util.Date;
 
 @Service
 public class TokenService {
 
-    @Value("${jwt.secret}")
-    private String secret;
+    public Boolean getAuthenticate(String token){
 
-    @Value("${jwt.expiration}")
-    private String expirationJwt;
 
-    public String generateToken(Authentication authentication){
-        User user = (User) authentication.getPrincipal();
+        WebClient webClient = WebClient.create("http://localhost:8085");
 
-        Date expiration = new Date( new Date().getTime() + Long.parseLong(expirationJwt));
-        return Jwts.builder()
-                .setIssuer("StoreApp")
-                .setSubject(user.getUsername())
-                .setIssuedAt(new Date())
-                .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS256, secret)
-                .compact();
-    }
-    public boolean isTokenValid(String token) {
-        try {
-            Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
-    }
-    public String getTokenUser(String token){
-        Claims claims = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
-        return claims.getSubject();
-    }
-
-    public UsernamePasswordAuthenticationToken getUsernamePasswordAuthenticationToken(String token) {
-        WebClient webClient = WebClient.create("http://localhost:8083");
-
-        return webClient
+        AuthenticationDTO authenticationDTO = webClient
                 .get()
-                .uri(uriBuilder -> uriBuilder
-                        .path("/login/")
-                        .queryParam(token)
-                        .build())
+                .uri("/login")
+                .header("authorization", token)
                 .retrieve()
-                .bodyToMono(UsernamePasswordAuthenticationToken.class)
+                .bodyToMono(AuthenticationDTO.class)
                 .block();
+        assert authenticationDTO != null;
+        return authenticationDTO.getAuthenticated();
     }
+
 }

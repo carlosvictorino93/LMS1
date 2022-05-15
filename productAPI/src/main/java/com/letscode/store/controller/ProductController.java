@@ -22,24 +22,34 @@ public class ProductController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public ProductDTO saveProduct(@RequestBody @Valid ProductDTO productDTO){
-
+    public ProductDTO saveProduct(@RequestBody @Valid ProductDTO productDTO, @RequestHeader("authorization") String token) throws AlreadyExistException{
+        if (tokenService.getAuthenticate(token)){
         return productService.saveProduct(productDTO);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 
     @GetMapping
-    public Page<ProductDTO> listProduct(@QuerydslPredicate(root = Product.class) Predicate predicate, Pageable pageable){
-        return productService.listProduct(predicate, pageable);
+    public Page<ProductDTO> listProduct(ProductDto productDto, Pageable pageable, @RequestHeader("authorization") String token) {
+        if (tokenService.getAuthenticate(token)){
+        return productService.listProduct(productDto, pageable);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 
     @PatchMapping("/{code}")
-    public ProductDTO updateProduct(@RequestBody @Valid ProductDTO productDTO) {
-        return productService.updateProduct(productDTO);
+    public ProductDTO updateProduct(@RequestBody @Valid ProductDTO productDTO, @RequestHeader("authorization") String token) {
+        if (tokenService.getAuthenticate(token)){
+        return productService.updateProduct(productDTO);      }
+        throw new NotAuthorizedException("não permitido");
     }
 
 
     @DeleteMapping("/{code}")
-    public void deleteClient(@PathVariable String code) {
+    public void deleteProduct(@PathVariable String code, @RequestHeader("authorization") String token) {
+        if (tokenService.getAuthenticate(token)){
         productService.deleteProduct(code);
+        }
+        throw new NotAuthorizedException("não permitido");
     }
 }
