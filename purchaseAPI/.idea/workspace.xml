@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28d0ad25-b255-4080-9eeb-0e057d62f5dc" name="Changes" comment="Criado micro serviço Login a partir do monolito de referência.">
       <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
