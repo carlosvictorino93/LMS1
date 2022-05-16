@@ -5,13 +5,20 @@ import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotFoundException;
 import com.letscode.store.model.Product;
 import com.letscode.store.repository.ProductRepository;
-import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -32,16 +39,16 @@ public class ProductService {
         return ProductDTO.convert(productRepository.save(Product.convert(id, productDTO)));
     }
 
-    public Page<ProductDTO> listProduct(ProductDto productDto, Pageable pageable) {
+    public Page<ProductDTO> listProduct(ProductDTO productDTO, Pageable pageable) {
         List<Criteria> criteriaList = new ArrayList<>();
-        if (productDTO.getproductCode() != null && !productDTO.productCode().isEmpty()){
-            criteriaList.add(Criteria.where("productCode").is(productDTO.getproductCode()));
+        if (productDTO.getProductCode() != null && !productDTO.getProductCode().isEmpty()){
+            criteriaList.add(Criteria.where("productCode").is(productDTO.getProductCode()));
         }
-        if (productDTO.getquantity() != null && !productDTO.getquantity().isEmpty()){
-            criteriaList.add(Criteria.where("quantity").is(productDTO.getquantity()));
+        if (productDTO.getQuantity() != null){
+            criteriaList.add(Criteria.where("quantity").is(productDTO.getQuantity()));
         }
-        if (productDTO.getprice() != null && !productDTO.getprice().isEmpty()){
-            criteriaList.add(Criteria.where("price").is(productDTO.getprice()));
+        if (productDTO.getPrice() != null){
+            criteriaList.add(Criteria.where("price").is(productDTO.getPrice()));
         }
         if(criteriaList.size() > 0){
             Criteria criteria = new Criteria().andOperator(criteriaList);

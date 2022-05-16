@@ -20,8 +20,10 @@ public class TokenService {
                 .retrieve()
                 .bodyToMono(AuthenticationDTO.class)
                 .block();
-        assert authenticationDTO != null;
-        return authenticationDTO.getAuthenticated();
+        if(authenticationDTO != null) {
+            return authenticationDTO.getAuthenticated();
+        }
+        return false;
     }
 
 }

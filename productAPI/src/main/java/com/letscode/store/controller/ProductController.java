@@ -1,13 +1,13 @@
 package com.letscode.store.controller;
 
 import com.letscode.store.dto.ProductDTO;
-import com.letscode.store.model.Product;
+import com.letscode.store.exception.AlreadyExistException;
+import com.letscode.store.exception.NotAuthorizedException;
 import com.letscode.store.service.ProductService;
-import com.querydsl.core.types.Predicate;
+import com.letscode.store.service.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +20,11 @@ public class ProductController {
 
     private final ProductService productService;
 
+    private final TokenService tokenService;
+
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public ProductDTO saveProduct(@RequestBody @Valid ProductDTO productDTO, @RequestHeader("authorization") String token) throws AlreadyExistException{
+    public ProductDTO saveProduct(@RequestBody @Valid ProductDTO productDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
         if (tokenService.getAuthenticate(token)){
         return productService.saveProduct(productDTO);
         }
@@ -30,9 +32,9 @@ public class ProductController {
     }
 
     @GetMapping
-    public Page<ProductDTO> listProduct(ProductDto productDto, Pageable pageable, @RequestHeader("authorization") String token) {
+    public Page<ProductDTO> listProduct(ProductDTO productDTO, Pageable pageable, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token)){
-        return productService.listProduct(productDto, pageable);
+        return productService.listProduct(productDTO, pageable);
         }
         throw new NotAuthorizedException("não permitido");
     }
@@ -48,8 +50,9 @@ public class ProductController {
     @DeleteMapping("/{code}")
     public void deleteProduct(@PathVariable String code, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token)){
-        productService.deleteProduct(code);
+            productService.deleteProduct(code);
+        }else{
+            throw new NotAuthorizedException("não permitido");
         }
-        throw new NotAuthorizedException("não permitido");
     }
 }

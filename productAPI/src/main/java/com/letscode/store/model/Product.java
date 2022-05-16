@@ -2,9 +2,9 @@ package com.letscode.store.model;
 
 import com.letscode.store.dto.ProductDTO;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.*;
-import java.util.List;
 
 
 @Getter @Setter

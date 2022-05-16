@@ -5,113 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28d0ad25-b255-4080-9eeb-0e057d62f5dc" name="Changes" comment="Criado micro serviço Login a partir do monolito de referência.">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/HealthCheckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductAndQuantityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/RequestPurchaseProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/TokenDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/AlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/ErrorValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/NotEnoughException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchasedProductKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/RolesEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/PurchaseProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/PurchaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/HealthCheckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/LoginDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ProductAndQuantityDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/RequestPurchaseProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/TokenDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/AlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/ErrorValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/NotEnoughException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/AuthorityKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/PurchasedProductKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/RolesEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/AuthorityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/PurchaseProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/PurchaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/AuthorityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/java/com/letscode/store/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/ClientControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/ProductControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/controller/PurchaseControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/repository/ClientRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/ClientServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/ProductServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/PurchaseProductServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/java/com/letscode/store/service/PurchaseServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src/test/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/StoreDB-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/java/com/letscode/store/model/QClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/test/java/com/letscode/store/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/test/java/com/letscode/store/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/StoreDB-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/config/ErrorHandle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/config/ErrorHandle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/config/SecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/filter/JwtTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/Product$ProductBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/QProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/generated-sources/java/com/letscode/store/model/QProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/test-classes/com/letscode/store/controller/ProductControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/test-classes/com/letscode/store/controller/ProductControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/target/test-classes/com/letscode/store/service/ProductServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +100,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/letscode/store" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -328,6 +251,7 @@
       <workItem from="1651411911645" duration="12524000" />
       <workItem from="1651451153779" duration="2077000" />
       <workItem from="1651453289346" duration="3522000" />
+      <workItem from="1652706453423" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Criado projeto com as regras de negócio">
       <created>1649971291819</created>

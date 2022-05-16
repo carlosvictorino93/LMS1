@@ -50,5 +50,5 @@ public class ErrorHandle {
 
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(NotAuthorizedException.class)
-    public String NotAuthorized( NotEnoughException exception){ return exception.getMessage();}
+    public String NotAuthorized( NotAuthorizedException exception){ return exception.getMessage();}
 }
