@@ -2,9 +2,9 @@ package com.letscode.store.model;
 
 import com.letscode.store.dto.ProductDTO;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.*;
-import java.util.List;
 
 
 @Getter @Setter
@@ -14,11 +14,9 @@ import java.util.List;
 @Document(collection = "product")
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @MongoId
+    private String id;
 
-    @Column(name = "product_code")
     private String productCode;
 
     private Integer quantity;
@@ -26,8 +24,9 @@ public class Product {
     private double price;
 
 
-    public static Product convert(ProductDTO dto) {
+    public static Product convert(String id, ProductDTO dto) {
         return Product.builder()
+                .id(id)
                 .productCode(dto.getProductCode())
                 .quantity(dto.getQuantity())
                 .price(dto.getPrice())

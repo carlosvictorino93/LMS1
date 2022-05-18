@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70f4d68c-1ff0-468a-b921-10c3cc0f5ca3" name="Changes" comment="Atualizado POM">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/dto/AuthenticationDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/exception/NotAuthorizedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/model/RolesEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/service/MongoAuthUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/service/MongoAuthUserDetailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/exception/NotAuthorizedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/model/RolesEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_05_2022_08_04__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/AuthorityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/repository/AuthorityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority$AuthorityBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/Authority.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/repository/AuthorityRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/config/ErrorHandle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/config/ErrorHandle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/model/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
