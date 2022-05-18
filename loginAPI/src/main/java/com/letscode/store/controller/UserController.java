@@ -19,6 +19,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public UserDTO saveUser(@RequestBody @Valid UserDTO userDTO){
+
         return mongoAuthUserDetailService.saveUser(userDTO);
     }
 
@@ -27,8 +28,8 @@ public class UserController {
         return principal;
     }
 
-    @PutMapping("/{username}")
-    public void updateUser(@RequestBody @Valid UserDTO userDTO, @PathVariable String username){
-        mongoAuthUserDetailService.updateUser(userDTO, username);
-    }
+//    @PutMapping("/{username}")
+//    public void updateUser(@RequestBody @Valid UserDTO userDTO, @PathVariable String username){
+//        mongoAuthUserDetailService.updateUser(userDTO, username);
+//    }
 }
