@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -16,28 +15,23 @@ public class ResponsePurchaseDTO {
 
     private LocalDateTime purchaseDate;
     private Double totalPurchased;
-    private ClientDTO clientDTO;
+    private String clientName;
     private List<ProductDTO> productDTOS;
 
 
-    public static ResponsePurchaseDTO convert(Purchase purchase){
+    public static ResponsePurchaseDTO convert(
+            Purchase purchase, String clientName,
+            List<ProductDTO> productDTOS
+    ){
         return ResponsePurchaseDTO.builder()
                 .purchaseDate(purchase.getPurchaseDate())
                 .totalPurchased(purchase.getTotalPurchased())
-                .clientDTO(ClientDTO.convert(purchase.getClient()))
-                .productDTOS(purchase.getPurchaseProducts().stream().map(ProductDTO::convert).collect(Collectors.toList()))
+                .clientName(clientName)
+                .productDTOS(productDTOS)
                 .build();
 
     }
 
-    public static ResponsePurchaseDTO convert(Purchase purchase, List<ProductAndQuantityDTO> purchasedProducts){
-        return ResponsePurchaseDTO.builder()
-                .purchaseDate(purchase.getPurchaseDate())
-                .totalPurchased(purchase.getTotalPurchased())
-                .clientDTO(ClientDTO.convert(purchase.getClient()))
-                .productDTOS(purchasedProducts.stream().map(ProductDTO::convert).collect(Collectors.toList()))
-                .build();
-    }
 
 
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-213.6777.52">
+    <data-source name="client@letscode.y2nte.mongodb.net" uuid="1465225b-7238-4b71-b51c-07873dc96a27">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>Felipe</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

@@ -1,5 +1,6 @@
 package com.letscode.store.controller;
 
+import com.letscode.store.dto.AuthenticationDTO;
 import com.letscode.store.dto.ClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotAuthorizedException;
@@ -23,10 +24,13 @@ public class ClienteController {
 
     private final TokenService tokenService;
 
+
+
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
     public ClientDTO saveClient(@RequestBody @Valid ClientDTO clientDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
-        if (tokenService.getAuthenticate(token)){
+
+        if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.saveClient(clientDTO);
         }
         throw new NotAuthorizedException("não permitido");
@@ -34,7 +38,7 @@ public class ClienteController {
 
     @GetMapping
     public Page<ClientDTO> getClients(ClientDTO clientDTO, Pageable pageable, @RequestHeader("authorization") String token) {
-        if (tokenService.getAuthenticate(token)){
+        if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.listClient(clientDTO, pageable);
         }
         throw new NotAuthorizedException("não permitido");
@@ -44,7 +48,7 @@ public class ClienteController {
 
     @PutMapping("/{cpf}")
     public ClientDTO updateClient(@RequestBody @Valid ClientDTO clientDTO, @PathVariable String cpf, @RequestHeader("authorization") String token) {
-        if (tokenService.getAuthenticate(token)){
+        if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.updateClient(clientDTO, cpf);
         }
         throw new NotAuthorizedException("não permitido");
@@ -54,11 +58,21 @@ public class ClienteController {
 
     @DeleteMapping("/{cpf}")
     public void deleteClient(@PathVariable String cpf, @RequestHeader("authorization") String token) {
-        if (tokenService.getAuthenticate(token)){
+        if (tokenService.getAuthenticate(token).getAuthenticated()){
             clientService.deleteClient(cpf);
         }else{
             throw new NotAuthorizedException("não permitido");
         }
-
+    }
+    @GetMapping("/validation/{cpf}")
+    public Client getClientValidation(@PathVariable String cpf, @RequestHeader("authorization") String token){
+        AuthenticationDTO authenticationDTO = tokenService.getAuthenticate(token);
+        if (
+                authenticationDTO.getAuthenticated() && authenticationDTO.getRoles().contains("validator")
+        ){
+            return clientService.getClient(cpf);
+        }else{
+            throw new NotAuthorizedException("não permitido");
+        }
     }
 }

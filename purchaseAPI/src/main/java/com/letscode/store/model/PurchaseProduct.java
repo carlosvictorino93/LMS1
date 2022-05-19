@@ -1,29 +1,23 @@
 package com.letscode.store.model;
 
+import com.letscode.store.dto.ValidationProductDTO;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.persistence.*;
 
 @Getter @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "purchase_product")
 public class PurchaseProduct {
 
-    @EmbeddedId
-    private PurchasedProductKey purchasedProductKey;
+    @Field("id_product")
+    private String product;
 
-    @ManyToOne
-    @MapsId("idPurchase")
-    @JoinColumn(name = "id_purchase")
-    private Purchase purchase;
-
-    @ManyToOne
-    @MapsId("idProduct")
-    @JoinColumn(name = "id_product")
-    private Product product;
-
-    @Column(name = "quantity_purchased")
+    @Field(name = "quantity_purchased")
     private Integer quantityPurchased;
+
+    public PurchaseProduct convert(ValidationProductDTO validationProductDTO){
+
+    }
 }

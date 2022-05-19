@@ -1,8 +1,5 @@
 package com.letscode.store.dto;
 
-
-import com.letscode.store.model.Product;
-import com.letscode.store.model.PurchaseProduct;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -19,30 +16,9 @@ public class ProductDTO {
 
     @NotBlank @Length(max = 4)
     private String productCode;
+
     @NotNull @Positive
     private Integer quantity;
-    @NotNull @Positive
-    private Double price;
 
-    public static ProductDTO convert(Product product) {
-        return ProductDTO.builder()
-                .productCode(product.getProductCode())
-                .quantity(product.getQuantity())
-                .price(product.getPrice())
-                .build();
-    }
-    public static ProductDTO convert(PurchaseProduct product) {
-        return ProductDTO.builder()
-                .productCode(product.getProduct().getProductCode())
-                .quantity(product.getQuantityPurchased())
-                .price(product.getProduct().getPrice())
-                .build();
-    }
-    public static ProductDTO convert(ProductAndQuantityDTO product) {
-        return ProductDTO.builder()
-                .productCode(product.getProduct().getProductCode())
-                .quantity(product.getQuantityPurchased())
-                .price(product.getProduct().getPrice())
-                .build();
-    }
+
 }

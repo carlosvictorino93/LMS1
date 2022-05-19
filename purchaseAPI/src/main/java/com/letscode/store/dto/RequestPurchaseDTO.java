@@ -16,5 +16,5 @@ public class RequestPurchaseDTO {
     @CPF @NotBlank
     private String cpf;
     @NotNull
-    private List<RequestPurchaseProductDTO> purchasedProducts;
+    private List<ProductDTO> productsDTO;
 }

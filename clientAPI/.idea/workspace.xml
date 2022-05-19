@@ -5,14 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70f4d68c-1ff0-468a-b921-10c3cc0f5ca3" name="Changes" comment="Atualizado POM">
+      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Checkout_at_18_05_2022_14_32__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ValidationClientDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ValidationProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/NotAuthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/config/ErrorHandle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/config/ErrorHandle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/AuthenticationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/AuthenticationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/dto/AuthenticationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/dto/AuthenticationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/config/ErrorHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/config/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ProductAndQuantityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/RequestPurchaseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/RequestPurchaseProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/AlreadyExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/AlreadyExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/ErrorValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/ErrorValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/NotEnoughException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/NotEnoughException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/filter/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/PurchaseProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/model/PurchasedProductKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/repository/PurchaseProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/repository/PurchaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/repository/PurchaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../purchaseAPI/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +106,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.letscode.store.dto" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.letscode.store.dto" />
       <recent name="com.letscode.store.model" />
@@ -113,6 +148,7 @@
       <workItem from="1652354231027" duration="3209000" />
       <workItem from="1652449548527" duration="14883000" />
       <workItem from="1652531585670" duration="8695000" />
+      <workItem from="1652962991156" duration="5820000" />
     </task>
     <task id="LOCAL-00001" summary="Atualizado POM">
       <created>1652354614457</created>
