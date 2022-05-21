@@ -25,7 +25,7 @@ public class Client {
     public static Client convert(String id, ClientDTO dto) {
        return Client.builder()
                .id(id)
-                .name(dto.getName())
+                .name(dto.getName().toLowerCase())
                 .cpf(dto.getCpf())
                 .build();
     }

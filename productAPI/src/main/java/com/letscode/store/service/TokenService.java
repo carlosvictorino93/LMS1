@@ -17,7 +17,6 @@ public class TokenService {
 
         AuthenticationDTO authenticationDTO = webClient
                 .get()
-
                 .uri("/login")
                 .header("authorization", token)
                 .retrieve()

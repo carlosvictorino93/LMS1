@@ -1,5 +1,6 @@
 package com.letscode.store.dto;
 
+
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -12,13 +13,13 @@ import javax.validation.constraints.Positive;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductDTO {
+public class ProductUpdateDTO {
 
     @NotBlank @Length(max = 4)
     private String productCode;
-
     @NotNull @Positive
-    private Integer quantityPurchased;
-
+    private Integer quantity;
+    @NotNull @Positive
+    private Double price;
 
 }

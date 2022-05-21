@@ -1,7 +1,11 @@
-import com.letscode.store.model.Purchase;
+package com.letscode.store.dto;
+
 import lombok.*;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
-
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class TokenDTO {
+    private String token;
+}

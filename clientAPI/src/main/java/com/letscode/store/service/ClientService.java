@@ -38,7 +38,7 @@ public class ClientService {
     public Page<ClientDTO> listClient(ClientDTO clientDTO, Pageable pageable) {
         List<Criteria> criteriaList = new ArrayList<>();
         if (clientDTO.getName() != null && !clientDTO.getName().isEmpty()){
-            criteriaList.add(Criteria.where("name").is(clientDTO.getName()));
+            criteriaList.add(Criteria.where("name").is(clientDTO.getName().toLowerCase()));
         }
         if (clientDTO.getCpf() != null && !clientDTO.getCpf().isEmpty()){
             criteriaList.add(Criteria.where("cpf").is(clientDTO.getCpf()));

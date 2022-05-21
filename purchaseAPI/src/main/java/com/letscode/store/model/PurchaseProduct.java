@@ -17,7 +17,11 @@ public class PurchaseProduct {
     @Field(name = "quantity_purchased")
     private Integer quantityPurchased;
 
-    public PurchaseProduct convert(ValidationProductDTO validationProductDTO){
-
+    public static PurchaseProduct convert(ValidationProductDTO validationProductDTO){
+        return PurchaseProduct
+                .builder()
+                .product(validationProductDTO.getId())
+                .quantityPurchased(validationProductDTO.getQuantityPurchased())
+                .build();
     }
 }

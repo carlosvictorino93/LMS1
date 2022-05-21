@@ -14,6 +14,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -71,8 +72,9 @@ public class ProductService {
         return productRepository.findAll(pageable).map(ProductDTO::convert);
     }
 
-    public ProductDTO updateProduct(ProductDTO productDTO) {
-        Product product = getProduct(productDTO.getProductCode());
+    public ProductDTO updateProduct(@Valid ProductDTO productDTO, String code) {
+        Product product = getProduct(code);
+        product.setProductCode(productDTO.getProductCode());
         product.setQuantity(productDTO.getQuantity());
         product.setPrice(productDTO.getPrice());
         return ProductDTO.convert(productRepository.save(product));

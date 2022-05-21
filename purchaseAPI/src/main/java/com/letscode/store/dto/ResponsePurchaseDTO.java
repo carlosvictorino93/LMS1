@@ -16,12 +16,12 @@ public class ResponsePurchaseDTO {
     private LocalDateTime purchaseDate;
     private Double totalPurchased;
     private String clientName;
-    private List<ProductDTO> productDTOS;
+    private List<ResponseProductDTO> productDTOS;
 
 
     public static ResponsePurchaseDTO convert(
             Purchase purchase, String clientName,
-            List<ProductDTO> productDTOS
+            List<ResponseProductDTO> productDTOS
     ){
         return ResponsePurchaseDTO.builder()
                 .purchaseDate(purchase.getPurchaseDate())

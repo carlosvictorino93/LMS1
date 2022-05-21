@@ -9,4 +9,5 @@ public class ValidationProductDTO {
     private String productCode;
     private Integer quantity;
     private double price;
+    private Integer quantityPurchased;
 }

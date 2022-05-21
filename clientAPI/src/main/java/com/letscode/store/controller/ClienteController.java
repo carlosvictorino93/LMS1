@@ -2,6 +2,7 @@ package com.letscode.store.controller;
 
 import com.letscode.store.dto.AuthenticationDTO;
 import com.letscode.store.dto.ClientDTO;
+import com.letscode.store.dto.ValidationClientDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotAuthorizedException;
 import com.letscode.store.model.Client;
@@ -65,12 +66,14 @@ public class ClienteController {
         }
     }
     @GetMapping("/validation/{cpf}")
-    public Client getClientValidation(@PathVariable String cpf, @RequestHeader("authorization") String token){
+    public ValidationClientDTO getClientValidation(@PathVariable String cpf, @RequestHeader("authorization") String token){
         AuthenticationDTO authenticationDTO = tokenService.getAuthenticate(token);
         if (
-                authenticationDTO.getAuthenticated() && authenticationDTO.getRoles().contains("validator")
+                authenticationDTO.getAuthenticated() && authenticationDTO.getRoles().contains("VALIDATOR")
         ){
-            return clientService.getClient(cpf);
+            return  ValidationClientDTO.convert(clientService.getClient(cpf));
+
+
         }else{
             throw new NotAuthorizedException("não permitido");
         }

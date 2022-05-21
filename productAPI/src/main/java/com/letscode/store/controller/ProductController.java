@@ -2,9 +2,9 @@ package com.letscode.store.controller;
 
 import com.letscode.store.dto.AuthenticationDTO;
 import com.letscode.store.dto.ProductDTO;
+import com.letscode.store.dto.ValidationProductDTO;
 import com.letscode.store.exception.AlreadyExistException;
 import com.letscode.store.exception.NotAuthorizedException;
-import com.letscode.store.model.Product;
 import com.letscode.store.service.ProductService;
 import com.letscode.store.service.TokenService;
 import lombok.RequiredArgsConstructor;
@@ -44,10 +44,12 @@ public class ProductController {
     @PatchMapping("/{code}")
     public ProductDTO updateProduct(
             @RequestBody @Valid ProductDTO productDTO,
+            @PathVariable String code,
             @RequestHeader("authorization") String token
     ) {
         if (tokenService.getAuthenticate(token).getAuthenticated()){
-        return productService.updateProduct(productDTO);      }
+            return productService.updateProduct(productDTO, code);
+        }
         throw new NotAuthorizedException("não permitido");
     }
 
@@ -65,13 +67,13 @@ public class ProductController {
     }
 
     @GetMapping("/validation/{productCode}")
-    public Product getClientValidation(@PathVariable String productCode, @RequestHeader("authorization") String token){
+    public ValidationProductDTO getClientValidation(@PathVariable String productCode, @RequestHeader("authorization") String token){
         AuthenticationDTO authenticationDTO = tokenService.getAuthenticate(token);
         if (
                 authenticationDTO.getAuthenticated()
-                        && authenticationDTO.getRoles().contains("validator")
+                        && authenticationDTO.getRoles().contains("VALIDATOR")
         ){
-            return productService.getProduct(productCode);
+            return ValidationProductDTO.convert(productService.getProduct(productCode));
         }else{
             throw new NotAuthorizedException("não permitido");
         }

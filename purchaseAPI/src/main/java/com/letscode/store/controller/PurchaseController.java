@@ -23,16 +23,18 @@ public class PurchaseController {
             @RequestBody @Valid RequestPurchaseDTO requestPurchaseDTO,
             @RequestHeader("authorization") String token
     ){
+
         return purchaseService.savePurchase(requestPurchaseDTO);
+
     }
 
-    @GetMapping
-    public Page<ResponsePurchaseDTO> listPurchase(
-            RequestPurchaseDTO requestPurchaseDTO,
-            Pageable pageable,
-            @RequestHeader("authorization") String token
-            ){
-        return purchaseService.listPurchase(requestPurchaseDTO, pageable);
-    }
+//    @GetMapping
+//    public Page<ResponsePurchaseDTO> listPurchase(
+//            RequestPurchaseDTO requestPurchaseDTO,
+//            Pageable pageable,
+//            @RequestHeader("authorization") String token
+//            ){
+//        return purchaseService.listPurchase(requestPurchaseDTO, pageable);
+//    }
 
 }

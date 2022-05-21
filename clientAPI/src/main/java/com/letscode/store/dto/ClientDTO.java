@@ -18,7 +18,7 @@ public class ClientDTO {
 
     public static ClientDTO convert(Client client) {
         return ClientDTO.builder()
-                .name(client.getName())
+                .name(client.getName().substring(0,1).toUpperCase() + client.getName().substring(1))
                 .cpf(client.getCpf())
                 .build();
     }
