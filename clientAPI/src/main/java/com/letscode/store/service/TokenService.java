@@ -13,7 +13,7 @@ public class TokenService {
     public AuthenticationDTO getAuthenticate(String token){
 
 
-    WebClient webClient = WebClient.create("http://localhost:8085");
+        WebClient webClient = WebClient.create("http://localhost:8085");
 
         AuthenticationDTO authenticationDTO = webClient
                 .get()
@@ -22,7 +22,7 @@ public class TokenService {
                 .retrieve()
                 .bodyToMono(AuthenticationDTO.class)
                 .block();
-        if(authenticationDTO != null) {
+        if (authenticationDTO != null) {
             return authenticationDTO;
         }
         return AuthenticationDTO

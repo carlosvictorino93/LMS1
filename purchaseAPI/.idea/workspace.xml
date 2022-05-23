@@ -5,49 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28d0ad25-b255-4080-9eeb-0e057d62f5dc" name="Changes" comment="Criado micro serviço Login a partir do monolito de referência.">
-      <change afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/dto/ValidationClientDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/dto/ValidationProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductUpdateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ResponseProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clientAPI/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Checkout_at_18_05_2022_14_32__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/dto/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/dto/ClientDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/dto/ClientDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/dto/ClientDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/service/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/RolesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/java/com/letscode/store/model/RolesEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/RolesEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginAPI/target/classes/com/letscode/store/model/RolesEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../clientAPI/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/dto/AuthenticationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/PurchaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/PurchaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ResponsePurchaseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/TokenDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/TokenDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ValidationProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dto/ValidationProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchaseProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/model/PurchaseProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,8 +84,9 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../clientAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -144,7 +116,20 @@
       <recent name="com.letscode.store.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.App">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.letscode.store.App" />
+      <module name="purchaseAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letscode.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in StoreDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StoreDB" />
       <option name="PACKAGE_NAME" value="" />
@@ -164,26 +149,6 @@
       <option name="PACKAGE_NAME" value="com.letscode.store.controller" />
       <option name="MAIN_CLASS_NAME" value="com.letscode.store.controller.ProductControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductControllerTest.deleteProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StoreDB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.letscode.store.controller.*" />
-          <option name="ENABLED" value="false" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="com.letscode.store.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.letscode.store.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.letscode.store.controller.ProductControllerTest" />
-      <option name="METHOD_NAME" value="deleteProductTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,19 +193,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Unnamed" />
-      <item itemvalue="JUnit.ProductControllerTest.deleteProductTest" />
       <item itemvalue="JUnit.ProductControllerTest.updateProductTest" />
       <item itemvalue="JUnit.ProductControllerTest" />
       <item itemvalue="JUnit.All in StoreDB" />
       <item itemvalue="Spring Boot.App" />
+      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Spring Boot.App" />
         <item itemvalue="JUnit.All in StoreDB" />
         <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest.updateProductTest" />
-        <item itemvalue="JUnit.ProductControllerTest.deleteProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -278,6 +243,7 @@
       <workItem from="1652961898515" duration="11669000" />
       <workItem from="1653053161349" duration="5318000" />
       <workItem from="1653140796244" duration="24967000" />
+      <workItem from="1653175439058" duration="5500000" />
     </task>
     <task id="LOCAL-00001" summary="Criado projeto com as regras de negócio">
       <created>1649971291819</created>
@@ -344,6 +310,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criado projeto com as regras de negócio" />
@@ -360,8 +327,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/letscode/store/service/ProductService.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="7" />
+          <line>56</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/letscode/store/service/PurchaseService.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

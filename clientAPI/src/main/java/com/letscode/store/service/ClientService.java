@@ -6,6 +6,7 @@ import com.letscode.store.exception.NotFoundException;
 import com.letscode.store.model.Client;
 import com.letscode.store.repository.ClientRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -13,6 +14,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,21 +24,23 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class ClientService {
+
     private final ClientRepository clientRepository;
     private final MongoTemplate mongoTemplate;
 
-    public ClientDTO saveClient(ClientDTO clientDTO) throws AlreadyExistException {
+    public Mono<ClientDTO> saveClient(ClientDTO clientDTO) throws AlreadyExistException {
         Optional<Client> client = clientRepository.findClientByCpf(clientDTO.getCpf());
         if(client.isPresent()) throw new AlreadyExistException("Client with cpf " + clientDTO.getCpf() + " Already Exist");
         String id = UUID.randomUUID().toString();
-        while (clientRepository.findById(id).isPresent()){
+        while (clientRepository.findById(id) != null){
             id = UUID.randomUUID().toString();
         }
-        return ClientDTO.convert(clientRepository.save(Client.convert(id, clientDTO)));
+        Client client_ = Client.convert(id, clientDTO);
+        return ClientDTO.convert(clientRepository.save(client_.));
 
     }
 
-    public Page<ClientDTO> listClient(ClientDTO clientDTO, Pageable pageable) {
+    public Flux<ClientDTO> listClient(ClientDTO clientDTO, Pageable pageable) {
         List<Criteria> criteriaList = new ArrayList<>();
         if (clientDTO.getName() != null && !clientDTO.getName().isEmpty()){
             criteriaList.add(Criteria.where("name").is(clientDTO.getName().toLowerCase()));

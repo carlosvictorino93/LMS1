@@ -53,8 +53,9 @@ public class ProductService {
     public void updateProduct(List<ValidationProductDTO> productDTOS, String token) {
         WebClient webClient = WebClient.create("http://localhost:8082");
         productDTOS.forEach(validationProductDTO -> {
+            double quantity = validationProductDTO.getQuantity() - validationProductDTO.getQuantityPurchased();
             String body = "{\n" +
-                    "\"quantity\": " + validationProductDTO.getQuantity() + ",\n" +
+                    "\"quantity\": " + quantity + ",\n" +
                     "\"productCode\": \"" + validationProductDTO.getProductCode() + "\",\n" +
                     "\"price\": " + validationProductDTO.getPrice() + "\n" +
                     "}";
