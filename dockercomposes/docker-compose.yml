@@ -41,6 +41,31 @@ services:
       - clientAPI
       - productAPI
 
+  prometheus:
+    image: prom/prometheus:v2.35.0
+    depends_on:
+      - app-example
+    networks:
+      - letscode-store
+    ports:
+      - "9090:9090"
+    restart: always
+    volumes:
+      - ./config:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --config.file=/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    ports:
+      - "3000:3000"
+    networks:
+      - letscode-store
+
   mongo:
     image: mongo
     restart: always
@@ -49,3 +74,6 @@ services:
 
 networks:
   letscode-store:
+
+volumes:
+  prometheus-data:

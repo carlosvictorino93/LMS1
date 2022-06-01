@@ -1,20 +1,18 @@
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\ErrorValidation.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\ClientDTO.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\model\Client.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\UserDTO.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\controller\HealthCheckController.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\model\User.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\service\TokenService.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\config\ErrorHandle.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\AuthenticationDTO.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\filter\JwtTokenFilter.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\model\RolesEnum.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\config\SwaggerConfig.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\controller\ClienteController.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\NotFoundException.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\AlreadyExistException.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\NotEnoughException.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\repository\ClientRepository.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\service\ClientService.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\config\SecurityConfiguration.java
-C:\Users\Felipe\IdeaProjects\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\App.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\model\RolesEnum.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\AlreadyExistException.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\ClientDTO.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\service\ClientService.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\AuthenticationDTO.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\NotEnoughException.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\model\Client.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\service\TokenService.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\controller\HealthCheckController.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\ErrorValidation.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\config\SwaggerConfig.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\NotFoundException.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\App.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\config\ErrorHandle.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\controller\ClienteController.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\exception\NotAuthorizedException.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dto\ValidationClientDTO.java
+D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\repository\ClientRepository.java
