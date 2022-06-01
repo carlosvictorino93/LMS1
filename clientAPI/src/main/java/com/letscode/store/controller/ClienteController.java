@@ -13,8 +13,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
+import java.util.UUID;
 
 
 @RestController
@@ -29,8 +32,7 @@ public class ClienteController {
 
     @ResponseStatus(code = HttpStatus.CREATED)
     @PostMapping
-    public ClientDTO saveClient(@RequestBody @Valid ClientDTO clientDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
-
+    public Mono<Client> saveClient(@RequestBody @Valid ClientDTO clientDTO, @RequestHeader("authorization") String token) throws AlreadyExistException {
         if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.saveClient(clientDTO);
         }
@@ -38,7 +40,7 @@ public class ClienteController {
     }
 
     @GetMapping
-    public Page<ClientDTO> getClients(ClientDTO clientDTO, Pageable pageable, @RequestHeader("authorization") String token) {
+    public Flux<Client> getClients(ClientDTO clientDTO, Pageable pageable, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.listClient(clientDTO, pageable);
         }
@@ -48,7 +50,7 @@ public class ClienteController {
 
 
     @PutMapping("/{cpf}")
-    public ClientDTO updateClient(@RequestBody @Valid ClientDTO clientDTO, @PathVariable String cpf, @RequestHeader("authorization") String token) {
+    public Mono<Client> updateClient(@RequestBody @Valid ClientDTO clientDTO, @PathVariable String cpf, @RequestHeader("authorization") String token) {
         if (tokenService.getAuthenticate(token).getAuthenticated()){
             return clientService.updateClient(clientDTO, cpf);
         }

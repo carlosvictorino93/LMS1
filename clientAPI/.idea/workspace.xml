@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70f4d68c-1ff0-468a-b921-10c3cc0f5ca3" name="Changes" comment="Atualizado POM">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Checkout_at_18_05_2022_14_32__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dockercomposes/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/dockerfiles/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/controller/ClienteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letscode/store/service/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../productAPI/target/classes/com/letscode/store/service/TokenService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/java/com/letscode/store/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../purchaseAPI/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../purchaseAPI/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/letscode/store/service/ClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letscode/store/service/ClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/controller/ClienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/repository/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/repository/ClientRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/letscode/store/service/ClientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/letscode/store/service/ClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/letscode/store/service/ClientServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loginAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,6 +79,11 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.letscode.store.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dockercomposes" />
+      <recent name="D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI" />
+      <recent name="D:\Lets code\microservices\reativo\LetsCode-Microsservicos-Store\clientAPI\src\main\java\com\letscode\store\dockerfiles" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.letscode.store.dto" />
@@ -128,6 +129,7 @@
       <workItem from="1653086570993" duration="962000" />
       <workItem from="1653144803838" duration="5895000" />
       <workItem from="1653175393374" duration="6279000" />
+      <workItem from="1654039248448" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="Atualizado POM">
       <created>1652354614457</created>

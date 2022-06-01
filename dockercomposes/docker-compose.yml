@@ -1,0 +1,51 @@
+version: "3"
+services:
+  clientAPI:
+    image: clienteapi:1.0
+    ports:
+      - "8081:8081"
+    networks:
+      - letscode-store
+    depends_on:
+      - mongo
+      - loginAPI
+
+  productAPI:
+    image: productapi:1.0
+    ports:
+      - "8082:8082"
+    networks:
+      - letscode-store
+    depends_on:
+      - mongo
+      - loginAPI
+
+  loginAPI:
+    image: loginapi:1.0
+    ports:
+      - "8085:8085"
+    networks:
+      - letscode-store
+    depends_on:
+      - mongo
+
+  purchaseAPI:
+    image: loginapi:1.0
+    ports:
+      - "8086:8086"
+    networks:
+      - letscode-store
+    depends_on:
+      - mongo
+      - loginAPI
+      - clientAPI
+      - productAPI
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      spring_data_mongodb_uri: mongodb+srv://Felipe:Xm3VVMDBCirv940a@letscode.y2nte.mongodb.net/client?retryWrites=true&w=majority
+
+networks:
+  letscode-store:

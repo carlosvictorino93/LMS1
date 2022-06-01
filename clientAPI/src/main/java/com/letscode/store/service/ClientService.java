@@ -26,9 +26,8 @@ import java.util.stream.Collectors;
 public class ClientService {
 
     private final ClientRepository clientRepository;
-    private final MongoTemplate mongoTemplate;
 
-    public Mono<ClientDTO> saveClient(ClientDTO clientDTO) throws AlreadyExistException {
+    public Mono<Client> saveClient(ClientDTO clientDTO) throws AlreadyExistException {
         Optional<Client> client = clientRepository.findClientByCpf(clientDTO.getCpf());
         if(client.isPresent()) throw new AlreadyExistException("Client with cpf " + clientDTO.getCpf() + " Already Exist");
         String id = UUID.randomUUID().toString();
@@ -36,11 +35,11 @@ public class ClientService {
             id = UUID.randomUUID().toString();
         }
         Client client_ = Client.convert(id, clientDTO);
-        return ClientDTO.convert(clientRepository.save(client_.));
 
+        return clientRepository.save(client_);
     }
 
-    public Flux<ClientDTO> listClient(ClientDTO clientDTO, Pageable pageable) {
+    public Flux<Client> listClient(ClientDTO clientDTO, Pageable pageable) {
         List<Criteria> criteriaList = new ArrayList<>();
         if (clientDTO.getName() != null && !clientDTO.getName().isEmpty()){
             criteriaList.add(Criteria.where("name").is(clientDTO.getName().toLowerCase()));
@@ -48,25 +47,7 @@ public class ClientService {
         if (clientDTO.getCpf() != null && !clientDTO.getCpf().isEmpty()){
             criteriaList.add(Criteria.where("cpf").is(clientDTO.getCpf()));
         }
-        if(criteriaList.size() > 0){
-            Criteria criteria = new Criteria().andOperator(criteriaList);
-            Query query = Query.query(criteria).with(pageable);
-            Query queryCount = Query.query(criteria);
-
-            Long count = mongoTemplate.count(queryCount, Client.class);
-            List<ClientDTO> clientDTOListList = mongoTemplate.find(query, Client.class)
-                    .stream()
-                    .map(ClientDTO::convert)
-                    .collect(Collectors.toList());
-
-
-            return new PageImpl<>(
-                    clientDTOListList,
-                    pageable,
-                    count
-            );
-        }
-        return clientRepository.findAll(pageable).map(ClientDTO::convert);
+        return clientRepository.findAll();
     }
 
 //    public Page<Client> listClientSpecific(ClientDTO clientDTO, Pageable pageable) {
@@ -96,7 +77,7 @@ public class ClientService {
 //
 //    }
 
-    public ClientDTO updateClient(ClientDTO clientDTO, String cpf) {
+    public Mono<Client> updateClient(ClientDTO clientDTO, String cpf) {
         Client client = getClient(cpf);
 
         Optional<Client> clientExist = clientRepository.findClientByCpf(clientDTO.getCpf());
@@ -104,7 +85,7 @@ public class ClientService {
 
         client.setName(clientDTO.getName());
         client.setCpf(clientDTO.getCpf());
-        return ClientDTO.convert(clientRepository.save(client));
+        return clientRepository.save(client);
     }
 
     public void deleteClient(String cpf) {
